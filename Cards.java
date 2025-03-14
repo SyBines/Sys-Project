@@ -49,17 +49,17 @@ public class Cards {
         int computerValue = getValue(computerCard);
 
         if (playerValue > computerValue) {
-            System.out.println("You win this round!");
+            System.out.println("You win!");
         } else if (computerValue > playerValue) {
-            System.out.println("Computer wins this round!");
+            System.out.println("Computer wins!");
         } else {
             int playerSuit = getSuitRank(playerCard);
             int computerSuit = getSuitRank(computerCard);
 
             if (playerSuit > computerSuit) {
-                System.out.println("You win this round by suit!");
+                System.out.println("You win by suit!");
             } else {
-                System.out.println("Computer wins this round by suit!");
+                System.out.println("Computer wins by suit!");
             }
         }
     }
@@ -85,5 +85,6 @@ public class Cards {
     public static void main(String[] args) {
         Cards myDeck = new Cards();
         myDeck.playWar();
+        myDeck.playBlackjack();
     }
 }
